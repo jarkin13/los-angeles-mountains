@@ -18,6 +18,10 @@
         if (e.target && e.target.matches('li')) {
           this.moveTo(e.target);
         }
+
+        if (e.target && e.target.matches('span')) {
+          this.moveTo(e.target.parentElement);
+        }
       });
     }
 
