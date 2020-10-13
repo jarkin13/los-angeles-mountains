@@ -14,6 +14,38 @@
   .SiteHeader {
     --desktopNavDisplay: none;
   }
+
+  .SiteHeaderNav.show {
+    --desktopNavDisplay: block;
+  }
+
+  .SiteHeader__navContainer {
+    position: relative;
+  }
+
+  .SiteHeaderNav {
+    position: absolute;
+    right: 16px;
+    top: 55px;
+  }
+
+  .SiteHeader.is-fixed .SiteHeaderNav.show {
+    background-color: #fff;
+    border-top: 3px solid #414f6b;
+    padding: 5px 16px 5px 0;
+    right: 0;
+    top: 70px;
+  }
+}
+
+.SiteHeader__menuNav {
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .SiteHeader__menuNav {
+    display: none;
+  }
 }
 
 .SiteHeader.is-hidden {
@@ -57,6 +89,16 @@
 }
 
 @media (max-width: 767px) {
+  .SiteHeaderNav__list {
+    text-align: right;
+  }
+
+  .SiteHeaderNavItem {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
   .SiteHeader.is-fixed .SiteHeader__navContainer {
     -webkit-box-pack: center;
     justify-content: center;
@@ -94,32 +136,34 @@
   display: inline-block;
 }
 
-.SiteHeaderNavItem__link::before,
-.SiteHeaderNavItem__link::after {
-  background-color: var(--linkColor);
-  content: '';
-  height: 1px;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-}
+@media (min-width: 768px) {
+  .SiteHeaderNavItem__link::before,
+  .SiteHeaderNavItem__link::after {
+    background-color: var(--linkColor);
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
 
-.SiteHeaderNavItem__link::after {
-  opacity: 0;
-  -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
-  transition: top 0.3s, opacity 0.3s, transform 0.3s;
-}
+  .SiteHeaderNavItem__link::after {
+    opacity: 0;
+    -webkit-transition: top 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: top 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: top 0.3s, opacity 0.3s, transform 0.3s;
+  }
 
-.SiteHeaderNavItem__link:hover::before,
-.SiteHeaderNavItem__link:hover::after {
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  transform: scale(1.15);
-}
+  .SiteHeaderNavItem__link:hover::before,
+  .SiteHeaderNavItem__link:hover::after {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    transform: scale(1.15);
+  }
 
-.SiteHeaderNavItem__link:hover::after {
-  opacity: 1;
-  top: 0;
+  .SiteHeaderNavItem__link:hover::after {
+    opacity: 1;
+    top: 0;
+  }
 }

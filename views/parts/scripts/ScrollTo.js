@@ -3,6 +3,7 @@
 
   function scrollTo(navItem) {
     let navItemTarget = navItem.getAttribute('data-target');
+    let headerShow = document.querySelector('.SiteHeaderNav.show');
     let scrollToTarget = document
       .getElementById(navItemTarget)
       .getBoundingClientRect();
@@ -12,6 +13,9 @@
       left: 0,
       behavior: 'smooth',
     });
+
+    if (headerShow)
+      document.querySelector('.SiteHeaderNav').classList.remove('show');
   }
 
   if (nav) {

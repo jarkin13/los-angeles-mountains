@@ -26,10 +26,14 @@
       if (scrollValue > headerHeight && scrollValue < heroHeight) {
         this.header.classList.add('is-hidden', 'theme--White');
         this.header.classList.remove('is-fixed', 'theme--Transparent');
-      } else if (scrollValue > heroHeight) {
+      }
+
+      if (scrollValue > heroHeight) {
         this.header.classList.add('is-fixed');
         this.header.classList.remove('is-hidden');
-      } else {
+      }
+
+      if (scrollValue < heroHeight && scrollValue < headerHeight) {
         this.header.classList.add('theme--Transparent');
         this.header.classList.remove('is-hidden', 'is-fixed', 'theme--White');
       }
