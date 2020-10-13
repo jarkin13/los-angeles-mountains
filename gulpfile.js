@@ -59,6 +59,10 @@ const js = () => {
     .pipe(server.stream());
 };
 
+const info = () => {
+  return src('views/parts/site-info/*').pipe(dest('./dist/assets'));
+};
+
 const watchFiles = () => {
   watch('views/**/*.pug', html);
   watch('views/**/*.js', js);
@@ -66,5 +70,5 @@ const watchFiles = () => {
   watch('views/**/*.css', series(css, html));
 };
 
-exports.build = series(clean, css, images, js, html);
-exports.default = series(clean, css, images, html, js, serve, watchFiles);
+exports.build = series(clean, css, images, js, info, html);
+exports.default = series(clean, css, images, html, js, info, serve, watchFiles);
