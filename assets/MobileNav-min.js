@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".MenuButton");e&&e.addEventListener("click",e=>{e.preventDefault();let t=document.querySelector(".SiteHeaderNav");document.querySelector(".SiteHeaderNav.show")?t.classList.remove("show"):t.classList.add("show")})})();
