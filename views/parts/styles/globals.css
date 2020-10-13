@@ -78,6 +78,12 @@ a {
   text-decoration: none;
 }
 
+a[name='target'] {
+  position: absolute;
+  left: 0;
+  top: -70px;
+}
+
 .SiteLogo {
   align-items: center;
   display: flex;

@@ -90,6 +90,10 @@
   line-height: 24px;
 }
 
+.Section__header {
+  position: relative;
+}
+
 .Section__header--vertical .Section__copy {
   padding-left: 38px;
 }

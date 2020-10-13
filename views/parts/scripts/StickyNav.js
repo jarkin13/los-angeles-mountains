@@ -6,17 +6,19 @@
     }
 
     init() {
-      window.onbeforeunload = () => {
-        window.scrollTo(0, 0);
-      };
-
       this.throttled(
         200,
         window.addEventListener('scroll', this.stickyElement.bind(this))
       );
+
+      document
+        .querySelector('.SiteHeaderNav__list')
+        .addEventListener('click', (e) => {
+          this.stickyElement('navClicked');
+        });
     }
 
-    stickyElement() {
+    stickyElement(clicked) {
       let heroHeight = this.hero.offsetHeight;
       let headerHeight = this.header.offsetHeight;
       let scrollValue = window.scrollY;
@@ -30,6 +32,11 @@
       } else {
         this.header.classList.add('theme--Transparent');
         this.header.classList.remove('is-hidden', 'is-fixed', 'theme--White');
+      }
+
+      if (clicked === 'navClicked') {
+        this.header.classList.remove('theme--Transparent');
+        this.header.classList.add('is-fixed', 'theme--White');
       }
     }
 
