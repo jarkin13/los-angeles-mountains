@@ -86,7 +86,7 @@ const watchFiles = () => {
 };
 
 exports.css = series(inlineCSS);
-exports.build = series(clean, inlineCSS, css, images, js, html, serve);
+exports.build = series(clean, inlineCSS, css, images, js, html);
 exports.default = series(
   clean,
   inlineCSS,
