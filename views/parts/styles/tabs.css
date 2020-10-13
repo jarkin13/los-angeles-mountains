@@ -1,6 +1,11 @@
 .Tabs__pane {
   display: none;
-  padding-top: 100px;
+}
+
+@media (min-width: 768px) {
+  .Tabs__pane {
+    padding-top: 100px;
+  }
 }
 
 .Tabs__pane.active {

@@ -100,7 +100,15 @@
   }
 }
 
-.Section__header--horizontal {
-  align-items: center;
-  display: flex;
+@media (max-width: 767px) {
+  .Section__header--horizontal .Section__copy {
+    padding-left: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .Section__header--horizontal {
+    align-items: center;
+    display: flex;
+  }
 }
