@@ -1,6 +1,12 @@
 .HomepageHero__container {
-  padding-bottom: 15.84%;
+  padding-bottom: 31.4%;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .HomepageHero__container {
+    padding-bottom: 15.84%;
+  }
 }
 
 .HomepageHero__bg img {
@@ -10,11 +16,19 @@
 }
 
 .HomepageHero__text {
-  left: 25.5%;
+  left: 13%;
   position: absolute;
-  top: 28.5%;
-  width: 37.125%;
+  top: 30.5%;
+  width: 68%;
   z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .HomepageHero__text {
+    left: 25.5%;
+    top: 28.5%;
+    width: 37.125%;
+  }
 }
 
 .HomepageHero__text svg {

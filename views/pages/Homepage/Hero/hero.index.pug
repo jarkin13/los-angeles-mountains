@@ -3,13 +3,17 @@ section.Section.HomepageHero.theme--transparent.js-scrollAfter
   div.HomepageHero__container
     div.HomepageHero__bg
       picture
-        source(srcset='assets/los-angeles-mountains-bg.webp' type="image/webp")
-        source(srcset='assets/los-angeles-mountains-bg.jpg' type="image/jpg")
+        source(srcset='assets/los-angeles-mountains-bg-mobile.webp' media="(max-width: 767px)" type="image/webp")
+        source(srcset='assets/los-angeles-mountains-bg-mobile.jpg' media="(max-width: 767px)" type="image/jpg")
+        source(srcset='assets/los-angeles-mountains-bg.webp' media="(min-width: 768px)" type="image/webp")
+        source(srcset='assets/los-angeles-mountains-bg.jpg' media="(min-width: 768px)" type="image/jpg")
         img(src='assets/los-angeles-mountains-bg.jpg' alt="Los Angeles Mountains Background")
     div.HomepageHero__text
       include ../../../parts/Header/images/los-angeles-mountains-text.svg
     div.HomepageHero__mountains
       picture
-        source(srcset='assets/los-angeles-mountains.webp' type="image/webp")
-        source(srcset='assets/los-angeles-mountains.png' type="image/png")
+        source(srcset='assets/los-angeles-mountains-mobile.webp' media="(max-width: 767px)" type="image/webp")
+        source(srcset='assets/los-angeles-mountains-mobile.png' media="(max-width: 767px)" type="image/png")
+        source(srcset='assets/los-angeles-mountains.webp' media="(min-width: 768px)" type="image/webp")
+        source(srcset='assets/los-angeles-mountains.png' media="(min-width: 768px)" type="image/png")
         img(src='assets/los-angeles-mountains.png' alt="Los Angeles Mountains")
