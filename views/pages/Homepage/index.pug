@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    title="Los Angeles Mountain"
+    link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Oswald:wght@700&display=swap" rel="stylesheet")
+    style
+      include homepage.inline.css
+    link(rel="stylesheet" href='assets/Header.css')
+    link(rel="stylesheet" href='assets/Footer.css')
+    link(rel="stylesheet" href='assets/Carousel.css')
+    link(rel="stylesheet" href='assets/Tabs.css')
+  body
+    include ../../parts/Header/header.pug
+    include Hero/hero.index.pug
+    include History/history.index.pug
+    include Climb/climb.index.pug
+    include ../../parts/Footer/footer.pug
+    script(src="assets/Carousel.js")
+    script(src="assets/Tabs.js")

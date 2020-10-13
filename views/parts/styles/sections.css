@@ -1,0 +1,81 @@
+.Section {
+  --sectionPaddingTop: 50px;
+  --sectionPaddingBottom: 25px;
+}
+
+@media (min-width: 1112px) {
+  .Section {
+    --sectionPaddingTop: 72px;
+  }
+}
+
+.Section a {
+  color: var(--linkColor);
+}
+
+.Section--small {
+  --sectionPaddingTop: 45px;
+}
+
+.Section__container {
+  background-color: var(--backgroundColor);
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.Section--hasBg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Section__row {
+  width: 100%;
+}
+
+.Section__layoutContainer {
+  width: 100%;
+  max-width: var(--layoutWidth);
+  margin: 0 var(--columnPaddingNormal);
+}
+
+.Section__layout {
+  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
+}
+
+.Section__title {
+  color: #414f6b;
+  font-family: var(--titleFontFamily);
+  font-size: 32px;
+  font-weight: var(--titleFontWeightBold);
+  text-transform: uppercase;
+}
+
+.Section__titleText {
+  left: -29px;
+  position: relative;
+  top: -30px;
+}
+
+.Section__titleNumber {
+  color: rgba(65, 79, 107, 0.5);
+  font-size: 135px;
+  line-height: 1;
+}
+
+.Section__copy {
+  line-height: 24px;
+}
+
+.Section__header--vertical .Section__copy {
+  padding-left: 73px;
+}
+
+.Section__header--horizontal {
+  align-items: center;
+  display: flex;
+}

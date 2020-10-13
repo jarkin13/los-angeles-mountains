@@ -1,0 +1,79 @@
+html {
+  --fontFamily: 'Lato', sans-serif;
+  --fontWeightLight: 300;
+  --fontWeightBold: 900;
+  --titleFontFamily: 'Oswald', sans-serif;
+  --titleFontWeightBold: 700;
+  --columnPaddingNormal: 16px;
+  --gutterWidth: 16px;
+  --scrollbarWidth: 0px;
+  --windowWidth: calc(100vw - var(--scrollbarWidth));
+  --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
+  --layoutWidthMax: 1080px;
+}
+
+@media (min-width: 1112px) {
+  html {
+    --layoutWidth: var(--layoutWidthMax);
+    --gutterWidth: calc((var(--windowWidth) - var(--layoutWidth)) / 2);
+  }
+}
+
+.theme--White {
+  --backgroundColor: #fff;
+  --textColor: #000;
+  --buttonColor: #000;
+  --linkColor: #414f6b;
+}
+
+.theme--Dark {
+  --backgroundColor: #414f6b;
+  --textColor: #63769d;
+  --buttonColor: #fff;
+  --linkColor: #b0b4be;
+}
+
+.theme--DarkOpacity {
+  --backgroundColor: rgba(65, 79, 107, 0.9);
+  --textColor: #fff;
+  --buttonColor: #fff;
+  --linkColor: #b0b4be;
+}
+
+.theme--Transparent {
+  --backgroundColor: none;
+  --textColor: #000;
+  --linkColor: #fff;
+}
+
+html *,
+html :after,
+html :before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeightLight);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--textColor);
+}
+
+blockquote,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,33 @@
+#mountain1 {
+  background-image: url('assets/los-angeles-mountains-climb1.jpg');
+}
+
+#mountain2 {
+  background-image: url('assets/los-angeles-mountains-climb2.jpg');
+}
+
+.Schedule__container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 25px 40px;
+  margin-bottom: 215px;
+  max-width: 325px;
+}
+
+.Schedule__row,
+.Schedule__table {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 24px;
+}
+
+.Schedule__month {
+  width: 100%;
+}
+
+.Schedule__month:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
+.Schedule__date {
+  width: 45%;
+}

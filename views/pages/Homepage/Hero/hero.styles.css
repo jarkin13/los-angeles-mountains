@@ -1,0 +1,35 @@
+.HomepageHero__container {
+  padding-bottom: 15.84%;
+  position: relative;
+}
+
+.HomepageHero__bg img {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.HomepageHero__text {
+  left: 25.5%;
+  position: absolute;
+  top: 28.5%;
+  width: 37.125%;
+  z-index: 2;
+}
+
+.HomepageHero__text svg {
+  width: 100%;
+}
+
+.HomepageHero__mountains {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.HomepageHero__mountains img {
+  display: block;
+  width: 100%;
+}
