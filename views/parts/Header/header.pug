@@ -4,7 +4,10 @@ header.SiteHeader.theme--Transparent
     div.SiteHeader__navContainer
       div.SiteLogo__container
         div.SiteLogo(data-analytics-label="Los Angeles Mountains Logo")
-          img(src="assets/los-angeles-mountains-logo.png" class="SiteLogo__icon")
+          picture.SiteLogo__icon
+              source(srcset='assets/los-angeles-mountains-logo.webp' type="image/webp")
+              source(srcset='assets/los-angeles-mountains-logo.png' type="image/png")
+              img(src='assets/los-angeles-mountains-logo.png' alt="Los Angeles Mountains Logo")
           div.SiteLogo__text
             include images/los-angeles-mountains-text.svg
       nav.SiteHeaderNav

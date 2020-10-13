@@ -62,9 +62,9 @@ const inlineCSS = () => {
 
 const images = () => {
   return src([
-    'views/pages/Homepage/images/*.{png,jpg}',
-    'views/parts/Header/images/*.{png,jpg}',
-    'views/parts/Footer/images/*.{png,jpg}',
+    'views/pages/Homepage/images/*.{png,jpg,webp}',
+    'views/parts/Header/images/*.{png,jpg,webp}',
+    'views/parts/Footer/images/*.{png,jpg,webp}',
   ])
     .pipe(dest('./dist/assets'))
     .pipe(server.stream());
@@ -81,7 +81,7 @@ const watchFiles = () => {
   watch('views/**/*.pug', html);
   watch('views/**/*.include.css', css);
   watch('views/**/*.js', js);
-  watch('view/**/*.{png,jpg}', images);
+  watch('view/**/*.{png,jpg,webp}', images);
   watch(['views/**/*.css', '!views/**/*.include.css'], series(inlineCSS, html));
 };
 

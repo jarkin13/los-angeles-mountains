@@ -5,7 +5,10 @@ header.SiteFooter.theme--Dark
       div.SiteLogo__container
         div.SiteFooter__logo
           div.SiteLogo(data-analytics-label="Los Angeles Mountains Logo")
-            img(src="assets/los-angeles-mountains-logo-blue.png" class="SiteLogo__icon")
+            picture.SiteLogo__icon
+              source(srcset='assets/los-angeles-mountains-logo-blue.webp' type="image/webp")
+              source(srcset='assets/los-angeles-mountains-logo-blue.png' type="image/png")
+              img(src='assets/los-angeles-mountains-logo-blue.png' alt="Los Angeles Mountains Logo")
             div.SiteLogo__text
               include ../Header/images/los-angeles-mountains-text.svg
       p.SiteFooterCopyright Copyright 2016. All rights reserved.
