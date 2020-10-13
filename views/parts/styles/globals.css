@@ -77,3 +77,23 @@ pre {
 a {
   text-decoration: none;
 }
+
+.SiteLogo {
+  align-items: center;
+  display: flex;
+}
+
+.SiteLogo img {
+  height: 43px;
+  width: auto;
+}
+
+.SiteLogo__text {
+  height: 40px;
+}
+
+.SiteLogo__text svg {
+  height: 40px;
+  padding-left: 10px;
+  width: auto;
+}

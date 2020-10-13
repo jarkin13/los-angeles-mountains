@@ -2,9 +2,11 @@
 header.SiteHeader.theme--Transparent
   div.SiteHeader__container
     div.SiteHeader__navContainer
-      h1.SiteHeader__logo
-        a.SiteHeader__logoLink(href="/" data-analytics-label="Los Angeles Mountains Logo")
-          img(src="assets/los-angeles-mountains-logo.png")
+      div.SiteLogo__container
+        div.SiteLogo(data-analytics-label="Los Angeles Mountains Logo")
+          img(src="assets/los-angeles-mountains-logo.png" class="SiteLogo__icon")
+          div.SiteLogo__text
+            include images/los-angeles-mountains-text.svg
       nav.SiteHeaderNav
         ol.SiteHeaderNav__list
           li.SiteHeaderNavItem

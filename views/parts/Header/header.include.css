@@ -1,11 +1,12 @@
 .SiteHeader {
+  background-color: var(--backgroundColor);
   font-weight: var(--fontWeightBold);
   font-style: italic;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  transition: transform 0.5s ease;
   width: 100%;
-  background-color: var(--backgroundColor);
   z-index: 100;
 }
 
@@ -13,6 +14,28 @@
   .SiteHeader {
     --desktopNavDisplay: none;
   }
+}
+
+.SiteHeader.is-hidden {
+  transform: translateY(-100%);
+}
+
+.SiteHeader.is-fixed {
+  position: fixed;
+  transform: translateY(0%);
+}
+
+.SiteHeader .SiteLogo img {
+  border: 1px solid #bcc3c6;
+  border-radius: 100%;
+}
+
+.SiteHeader .SiteLogo__text {
+  display: none;
+}
+
+.SiteHeader.is-fixed .SiteLogo__text {
+  display: block;
 }
 
 .SiteHeader__container {

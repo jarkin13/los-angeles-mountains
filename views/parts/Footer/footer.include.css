@@ -16,6 +16,10 @@
   padding: 0 var(--columnPaddingNormal);
 }
 
+.SiteFooter .SiteLogo__text svg path {
+  fill: #63769d;
+}
+
 .SiteFooter__navContainer {
   display: -webkit-box;
   display: flex;

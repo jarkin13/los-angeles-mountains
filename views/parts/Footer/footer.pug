@@ -2,7 +2,10 @@
 header.SiteFooter.theme--Dark
   div.SiteFooter__container
     div.SiteFooter__navContainer
-      h1.SiteFooter__logo
-        a.SiteFooter__logoLink(href="/" data-analytics-label="Los Angeles Mountains Logo")
-          img(src="assets/los-angeles-mountains-foot-logo.png")
+      div.SiteLogo__container
+        div.SiteFooter__logo
+          div.SiteLogo(data-analytics-label="Los Angeles Mountains Logo")
+            img(src="assets/los-angeles-mountains-logo-blue.png" class="SiteLogo__icon")
+            div.SiteLogo__text
+              include ../Header/images/los-angeles-mountains-text.svg
       p.SiteFooterCopyright Copyright 2016. All rights reserved.
