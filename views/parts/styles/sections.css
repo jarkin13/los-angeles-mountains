@@ -55,16 +55,35 @@
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .Section__title {
+    font-size: 26px;
+  }
+}
+
 .Section__titleText {
-  left: -29px;
+  left: -13px;
   position: relative;
-  top: -30px;
+  top: -12px;
+}
+
+@media (min-width: 768px) {
+  .Section__titleText {
+    left: -29px;
+    top: -30px;
+  }
 }
 
 .Section__titleNumber {
   color: rgba(65, 79, 107, 0.5);
-  font-size: 135px;
+  font-size: 60px;
   line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .Section__titleNumber {
+    font-size: 135px;
+  }
 }
 
 .Section__copy {
@@ -72,7 +91,13 @@
 }
 
 .Section__header--vertical .Section__copy {
-  padding-left: 73px;
+  padding-left: 38px;
+}
+
+@media (min-width: 768px) {
+  .Section__header--vertical .Section__copy {
+    padding-left: 73px;
+  }
 }
 
 .Section__header--horizontal {
