@@ -32,24 +32,6 @@ const html = () => {
 };
 
 const css = () => {
-  return src('views/**/*.include.css')
-    .pipe(cleanCSS())
-    .pipe(
-      rename(({ basename, extname }) => {
-        const index = basename.indexOf('.');
-        const name = basename.substring(0, index);
-        return {
-          dirname: 'dist/assets',
-          basename: name.charAt(0).toUpperCase() + name.slice(1),
-          extname,
-        };
-      })
-    )
-    .pipe(dest('./'))
-    .pipe(server.stream());
-};
-
-const inlineCSS = () => {
   let tasks = CONFIG.CSS.map((config) => {
     return src(config.files)
       .pipe(cleanCSS())
@@ -79,21 +61,10 @@ const js = () => {
 
 const watchFiles = () => {
   watch('views/**/*.pug', html);
-  watch('views/**/*.include.css', css);
   watch('views/**/*.js', js);
   watch('view/**/*.{png,jpg,webp}', images);
-  watch(['views/**/*.css', '!views/**/*.include.css'], series(inlineCSS, html));
+  watch('views/**/*.css', series(css, html));
 };
 
-exports.css = series(inlineCSS);
-exports.build = series(clean, inlineCSS, css, images, js, html);
-exports.default = series(
-  clean,
-  inlineCSS,
-  css,
-  images,
-  html,
-  js,
-  serve,
-  watchFiles
-);
+exports.build = series(clean, css, images, js, html);
+exports.default = series(clean, css, images, html, js, serve, watchFiles);
