@@ -53,12 +53,13 @@
   -webkit-box-align: center;
   align-items: center;
   min-height: 56px;
-  padding: 32px var(--columnPaddingNormal) 12px;
+  padding: 12px var(--columnPaddingNormal);
 }
 
-@media (min-width: 768px) {
-  .SiteHeader__navContainer {
-    padding: 12px var(--columnPaddingNormal);
+@media (max-width: 767px) {
+  .SiteHeader.is-fixed .SiteHeader__navContainer {
+    -webkit-box-pack: center;
+    justify-content: center;
   }
 }
 
